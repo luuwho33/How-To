@@ -98,4 +98,4 @@ To change the network settings to use the USB NIC:
 ## <a name="video-demo"></a>7. Video Demo
 Here is a quick video showing the above steps to show you the necessary steps in order to keep the written steps shorter.
 
-[Link to Demo Video]()
+[Link to Demo Video](https://youtu.be/p_4C-SLiIgU)
