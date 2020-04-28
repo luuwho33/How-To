@@ -1,0 +1,56 @@
+#Eyewitness
+
+EyeWitness is designed to take screenshots of websites, RDP services, and open VNC servers, provide some server header info, and identify default credentials if possible.
+
+1. [Installing the Eyewitness tool] (#Install-Eyewitness)
+2. [Commands within Eyewitness](#Eyewitness-Help)
+3. [Utilizing Eyewitness to get Screenshots](#Use-of-Eyewitness)
+
+## <a name="Install-Eyewitness"></a>1. Install Eyewitness Tool
+
+1. Open Terminal window within the virtual machine. 
+2. Run a command to install Eyewitness from the list of tools.
+3. The command is the following line:
+```
+apt-get install eyewitness
+```
+## <a name="Eyewitness-Help"></a>2. Eyewitness Help
+
+1. Run the following command to initiate the help screen: "eyewitness help"
+
+```
+################################################################################
+#                                  EyeWitness                                  #
+################################################################################
+#           FortyNorth Security - https://www.fortynorthsecurity.com           #
+################################################################################
+
+usage: EyeWitness.py [--web] [-f Filename] [-x Filename.xml]
+                     [--single Single URL] [--no-dns] [--timeout Timeout]
+                     [--jitter # of Seconds] [--delay # of Seconds]
+                     [--threads # of Threads]
+                     [--max-retries Max retries on a timeout]
+                     [-d Directory Name] [--results Hosts Per Page]
+                     [--no-prompt] [--user-agent User Agent]
+                     [--difference Difference Threshold]
+                     [--proxy-ip 127.0.0.1] [--proxy-port 8080]
+                     [--proxy-type socks5] [--show-selenium] [--resolve]
+                     [--add-http-ports ADD_HTTP_PORTS]
+                     [--add-https-ports ADD_HTTPS_PORTS]
+                     [--only-ports ONLY_PORTS] [--prepend-https]
+                     [--resume ew.db] [--ocr]
+EyeWitness.py: error: unrecognized arguments: help
+```
+
+## <a name="Use-of-Eyewitness"></a>3. Eyewitness Use
+
+1. Compile a list of IPs that you want the tool to comb through in order to pull screenshots. 
+2. The command will include the list of target IPs, type of browser to look for, and any special configurations to include. 
+3. Example of a command to run:
+```
+root@kali:~# eyewitness -f /root/Documents/IPs.txt -- web -
+```
+4. Once the command has executed and run, open the report and view the IPs the tool was able to get screenshots from. 
+5. Navigate to any IPs that presented a login portal. Research default credentials to the application or system portal, and attempt to gain access. If access is granted to any default credentials, make a finding.
+6. Save the report to a PDF or export.
+
